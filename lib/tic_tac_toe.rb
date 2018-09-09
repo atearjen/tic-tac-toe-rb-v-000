@@ -122,7 +122,7 @@ def play(board)
     turn(board)
     counter += 1
     if over?(board)
-      counter = 10
+      counter = 9 
     end
   end
 end
