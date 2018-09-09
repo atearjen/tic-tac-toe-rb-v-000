@@ -13,9 +13,9 @@ def input_to_index(str)
   return number
 end
 
-# def move(board,index,value = "X")
-#   board[index] = value
-# end
+def move(board,index,value = "X")
+  board[index] = value
+end
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
