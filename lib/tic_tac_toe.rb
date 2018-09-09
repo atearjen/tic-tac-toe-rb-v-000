@@ -1,3 +1,5 @@
+require "pry"
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -119,6 +121,7 @@ end
 def play(board)
   counter = 0
   while counter < 9
+    binding.pry
     turn(board)
     counter += 1
     if over?(board)
