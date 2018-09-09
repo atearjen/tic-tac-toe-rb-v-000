@@ -129,4 +129,10 @@ def play(board)
     counter += 1
   end
 
+  if won?(board)
+    puts "Congratulations #{winner(board)}"
+  elsif draw?(board)
+
+  end
+
 end
