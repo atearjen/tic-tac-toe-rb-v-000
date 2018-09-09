@@ -133,7 +133,7 @@ def play(board)
     champ = winner(board)
     puts "Congratulations #{champ}"
   elsif draw?(board)
-
+    puts "Cat's Game!"
   end
 
 end
