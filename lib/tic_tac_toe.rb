@@ -121,7 +121,8 @@ def play(board)
   while counter < 9
     turn(board)
     counter += 1
-  if over?(board)
-    counter = 10
+    if over?(board)
+      counter = 10
+    end
   end
 end
