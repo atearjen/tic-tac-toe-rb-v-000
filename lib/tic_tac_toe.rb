@@ -26,7 +26,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board,index) == true
-    player_move(board,index,token = 'X')
+    player_move(board,index,token)
     display_board(board)
   else
     turn(board)
@@ -122,7 +122,7 @@ def play(board)
     turn(board)
     counter += 1
     if over?(board)
-      counter = 9 
+      counter = 9
     end
   end
 end
