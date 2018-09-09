@@ -42,6 +42,7 @@ def valid_move?(board,index)
     return false
   end
 end
+
 def turn_count(board)
   counter = 0
   board.each do |position|
