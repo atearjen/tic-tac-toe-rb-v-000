@@ -20,6 +20,17 @@ end
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board,index) == true
+    move(board,index,token = 'X')
+    display_board(board)
+  else
+    turn(board)
+  end
+end
 def valid_move?(board,index)
   if index <= 8 && index >= 0
     if (position_taken?(board,index) == false)
