@@ -42,6 +42,24 @@ def valid_move?(board,index)
     return false
   end
 end
+def turn_count(board)
+  counter = 0
+  board.each do |position|
+    if position == "X" || position == "O"
+      counter +=1
+    end
+  end
+  return counter
+end
+
+def current_player(board)
+  turns = turn_count(board)
+  if turns % 2 == 0
+    return "X"
+  else
+    return "O"
+  end
+end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2], # Top row
