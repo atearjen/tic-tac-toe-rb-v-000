@@ -121,11 +121,12 @@ end
 def play(board)
   counter = 0
   while counter < 9
+    if over?(board)
+      break 
+    end
     binding.pry
     turn(board)
     counter += 1
-    if over?(board)
-      counter = 9
-    end
+    
   end
 end
